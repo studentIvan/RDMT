@@ -51,7 +51,7 @@ $dx{w} = EV::io $dx{server}, EV::READ, sub {
                     my ($key, $max) = split(':', $dx{'data'.$cId});
                     $control{$key} = 0 unless exists $control{$key};
                     $control{$key}++;
-                    print {$dx{'client'.$cId}} ($control{$key} >= $max) ? 0:1;
+                    print {$dx{'client'.$cId}} ($control{$key} > $max) ? 0:1;
                     $dx{'wrblock'.$cId} = 1;
                 }
             };

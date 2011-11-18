@@ -1,4 +1,8 @@
 <?php
+error_reporting(715);
+date_default_timezone_set('Europe/Moscow');
+ini_set('display_errors', 'On');
+
 require '..' . DIRECTORY_SEPARATOR . 'Api' . DIRECTORY_SEPARATOR . 'Rdmt.php';
 
 $control = new Rdmt(3308);

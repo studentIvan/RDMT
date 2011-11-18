@@ -2,17 +2,6 @@
 /**
  * Rdmt-server api
  * php class
- *
- * Example:
- * <?php
- * //...
- * $rdmt = new Rdmt(8888, 800);
- * $sql = "INSERT INTO messages (message_id, message_text) VALUES (NULL, $msg)";
- * if ($rdmt->accept($sql)) {
- *  $result = $db->query($sql);
- * } else {
- *  die('Too many query per minutes, please wait and try again!');
- * }
  * 
  * @throws Exception
  * @author Ivan

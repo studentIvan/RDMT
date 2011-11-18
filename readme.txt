@@ -1,7 +1,7 @@
 RDMT Perl Server
 
 About:
-Crossplatform and asyncronous rdmt-server helps you to monitor database queries and other load.
+Crossplatform and asynchronous rdmt-server helps you to monitor database queries and other load.
 
 Installation:
 1. Install EV, IO::Socket, Config::IniFiles modules for perl:

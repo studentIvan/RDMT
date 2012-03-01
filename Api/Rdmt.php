@@ -1,19 +1,13 @@
 <?php
 /**
- * Rdmt-server api
- * php class
+ * RDMT php api prototype
  * 
- * @throws Exception
- * @author Ivan
+ * @author @student_ivan
+ * @license BSD
  */
 class Rdmt
 {
-    private $stream;
-    private $sAddr;
-    private $sPort;
-    private $cState;
-    private $defaultSCPM;
-    private $excMode;
+    protected $stream, $sAddr, $sPort, $cState, $defaultSCPM, $excMode;
 
     const EXCEPT = true;
     const NOT_EXCEPT = false;

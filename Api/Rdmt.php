@@ -131,7 +131,7 @@ class Rdmt
         $this->cState = false;
     }
 
-    private function _connect()
+    protected function _connect()
     {
         if (!$this->cState) {
             socket_connect($this->stream, $this->sAddr, $this->sPort);
@@ -150,7 +150,7 @@ class Rdmt
         return true;
     }
 
-    private function _checkErrors()
+    protected function _checkErrors()
     {
         if (socket_last_error($this->stream) != 0) {
             $e = socket_strerror(socket_last_error($this->stream));
@@ -161,7 +161,7 @@ class Rdmt
         }
     }
 
-    private function _query($signal, $SCPM)
+    protected function _query($signal, $SCPM)
     {
         $data = md5($signal) . ':' . $SCPM;
         socket_write($this->stream, $data, strlen($data));
@@ -178,7 +178,7 @@ class Rdmt
         return true;
     }
 
-    private function _answer()
+    protected function _answer()
     {
         $result = intval(socket_read($this->stream, 1));
 
